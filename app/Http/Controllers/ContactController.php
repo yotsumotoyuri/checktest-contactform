@@ -9,6 +9,9 @@ use App\Models\Contact;
 
 class ContactController extends Controller
 {
+    public function index(){
+        return view('index');
+    }
     public function contact(){
         $categories = Category::all();
         return view('contact' , compact('categories'));

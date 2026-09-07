@@ -1,0 +1,69 @@
+/* 共通部分 */
+.header{
+    display: none;
+}
+
+/* トップ画面 */
+.top{
+    position: relative;
+    height: 100vh;
+}
+
+.top__mv{
+    overflow: hidden;
+    clip-path: ellipse(110% 100% at 50% 0%);
+    width: 100%;
+    height: 100vh;
+}
+
+.top__mv video{
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.top__mv::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(140, 127, 118, 0.2);
+    transition: background-color 1s ease;
+    z-index: 1;
+}
+
+.top.is-active .top__mv::after{
+    background-color: rgba(140, 127, 118, 0.4);
+    clip-path: ellipse(110% 100% at 50% 0%);
+}
+
+.top__txt{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(calc(-50% + 30px));
+    opacity: 0;
+    color: #fff;
+    transition: all 1s ease;
+    z-index: 2;
+}
+
+.sub__ttl{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.top__h2{
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.top.is-active .top__txt{
+    opacity: 1;
+    transform: translateY(-50%);
+}

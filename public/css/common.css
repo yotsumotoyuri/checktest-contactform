@@ -1,7 +1,9 @@
 body{
     font-size: 16px;
     color: #8c7f76;
-    font-family: serif;
+    font-family: "Source Code Pro", monospace, serif;
+    font-weight: 400;
+    line-height: 2.2;
 }
 
 .header{
